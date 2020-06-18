@@ -1,0 +1,12 @@
+[submodule "zsh/zsh-syntax-highlighting"]
+	path = zsh/zsh-syntax-highlighting
+	url = https://github.com/zsh-users/zsh-syntax-highlighting.git
+[submodule "vim/pack/latex/start/vim-latex"]
+	path = vim/pack/latex/start/vim-latex
+	url = https://github.com/vim-latex/vim-latex.git
+[submodule "vim/pack/dev/start/nerdtree"]
+	path = vim/pack/dev/start/nerdtree
+	url = https://github.com/preservim/nerdtree.git
+[submodule "vim/pack/dev/opt/auto-pairs"]
+	path = vim/pack/dev/opt/auto-pairs
+	url = https://github.com/jiangmiao/auto-pairs
