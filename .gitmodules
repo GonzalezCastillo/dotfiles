@@ -10,3 +10,6 @@
 [submodule "vim/pack/dev/opt/auto-pairs"]
 	path = vim/pack/dev/opt/auto-pairs
 	url = https://github.com/jiangmiao/auto-pairs
+[submodule "vim/pack/dev/start/vim-closetag"]
+	path = vim/pack/dev/start/vim-closetag
+	url = https://github.com/alvan/vim-closetag
