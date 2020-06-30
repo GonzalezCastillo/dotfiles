@@ -65,3 +65,5 @@ augroup texfunctions
 	autocmd Filetype tex inoremap '' "
 augroup END
 
+" Use closetag plugin in php files.
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.php'
