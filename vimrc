@@ -3,7 +3,6 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-set conceallevel=2
 
 colorscheme solarized8
 set background=dark
@@ -29,6 +28,7 @@ map <C-n> :NERDTreeToggle<CR>
 
 command Es execute "set spell | set spelllang=es spell"
 command En execute "set spell | set spelllang=en_gb spell"
+command NT execute "NERDTree"
 
 imap \'a á
 imap \'e é
