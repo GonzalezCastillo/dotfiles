@@ -56,7 +56,7 @@ let g:python_recommended_style=0
 augroup custom_filetypedetect 
 	autocmd!
 	autocmd BufRead,BufNewFile *.m,*.oct set filetype=octave 
-	autocmd BufNewFile,BufRead *.cls set filetype=tex
+	autocmd BufNewFile,BufRead *.cls,*.ins set filetype=tex
 	autocmd BufNewFile,BufRead *.wl,*.wls,*.nb set filetype=mma
 augroup END 
 
