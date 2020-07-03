@@ -1,6 +1,6 @@
 # BE CAREFUL: this script will overwrite your files and settings.
 
-DOTFILES=~/.dotfiles
+DOTFILES=~/repos/dotfiles
 
 ln -s -i $DOTFILES/vimrc ~/.vimrc
 ln -s -i $DOTFILES/gvimrc ~/.gvimrc
