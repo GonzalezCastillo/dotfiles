@@ -82,28 +82,28 @@
 \unimathsetup{warnings-off={mathtools-colon,mathtools-overbracket}}
 \unimathsetup{math-style=french, bold-style=upright, sans-style=upright}
 
+
 \iflegacy
-
 	\iftimes
-		\ifhelvet
-			\renewcommand\familydefault\sfdefault
-		\fi
+	\ifhelvet
+		\renewcommand\familydefault\sfdefault
+	\fi
 
-		\setmainfont{XITS}[
-			Extension = .otf,
-			UprightFont = {*-Regular},
-			BoldFont = {*-Bold},
-			ItalicFont = {*-Italic},
-			BoldItalicFont = {*-BoldItalic}]
+	\setmainfont{XITS}[
+		Extension = .otf,
+		UprightFont = {*-Regular},
+		BoldFont = {*-Bold},
+		ItalicFont = {*-Italic},
+		BoldItalicFont = {*-BoldItalic}]
 
-		\setsansfont{texgyreheros}[
-			Extension = .otf,
-			UprightFont = {*-regular},
-			BoldFont = {*-bold},
-			ItalicFont = {*-italic},
-			BoldItalicFont = {*-bolditalic}]
+	\setsansfont{texgyreheros}[
+		Extension = .otf,
+		UprightFont = {*-regular},
+		BoldFont = {*-bold},
+		ItalicFont = {*-italic},
+		BoldItalicFont = {*-bolditalic}]
 
-		\setmathfont{XITSMath-Regular.otf}
+	\setmathfont{XITSMath-Regular.otf}
 	\fi
 
 \else
@@ -162,7 +162,81 @@
 		BoldSlantedFont = {*slant10-bold.otf},
 	]
 	
-	% TODO IMPLEMENT SANS FONTS. ADD IFSANS SCENARIO.
+
+	\setsansfont{Inter}[
+		Extension = .otf,
+		Ligatures = {TeX},
+		UprightFont = {*-Regular},
+		Scale = 0.85,
+		UprightFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-Regular}}
+			}
+		},
+		BoldFont = {*-Bold},
+		BoldFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+ 				{Size = 16-,	Font={*Display-Bold}}
+			}
+		},
+		ItalicFont = {*-Italic},
+		ItalicFeatures = {
+			SizeFeatures= {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-Italic}}
+			}
+		},
+		BoldItalicFont = {*-BoldItalic},
+		BoldItalicFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-BoldItalic}}
+			}
+		}
+	]
+
+
+	\newfontfamily\sflight{Inter}[
+		Extension = .otf,
+		Ligatures = {TeX},
+		UprightFont = {*-Light},
+		Scale = 0.85,
+		UprightFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-Light}}
+			}
+		},
+		BoldFont = {*-SemiBold},
+		BoldFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+ 				{Size = 16-,	Font={*Display-SemiBold}}
+			}
+		},
+		ItalicFont = {*-LightItalic},
+		ItalicFeatures = {
+			SizeFeatures= {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-LightItalic}}
+			}
+		},
+		BoldItalicFont = {*-SemiBoldItalic},
+		BoldItalicFeatures = {
+			SizeFeatures = {
+				{Size = -16},
+				{Size = 16-,	Font={*Display-SemiBoldItalic}}
+			}
+		}
+	]
+
+	\newcommand\textlf[1]{{\sflight#1}}
+
+	\ifsans
+		\renewcommand\familydefault\sfdefault
+	\fi
 
 	\setmathfont{latinmodern-math.otf}
 	\setmathfont[range={\varnothing}]{XITSMath-Regular.otf}
@@ -770,24 +844,24 @@
 		\vspace*{1.5em}	
 	\else
 		%\newgeometry{margin=3cm}
-		\vspace*{6em}
+		\vspace*{5em}
 	\fi
 
 	\begin{center}
 	{\@coverfont\Huge\@title{\ifx\Subtitle\empty{\\[0.8em]}\else{\\[0.3em]}\fi}}
-	{\ifx\@subtitle\@compare\else{\@coverfont\huge\@subtitle\\[0.8em]}\fi}
+	{\ifx\@subtitle\@compare\else{\@coverfont\LARGE\@subtitle\\[1.3em]}\fi}
 	
 	\textsc{
-	%<book>\LARGE
+	%<book>\Large
 	%<article>\large
 	\@author}
 
 	\vspace*{\fill}
 	\ifx\shortversion\@compare{}\else
 		{\smallskip \@coverfont
-		%<book>\LARGE
-		%<article>\Large
-		\centerline{\shortversion} \bigskip\bigskip}
+		%<book>\Large
+		%<article>\large
+		\centerline{\shortversion}}
 	\fi
 
 

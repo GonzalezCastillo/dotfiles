@@ -80,7 +80,6 @@ urlcolor=blue,filecolor=black,citecolor=black]{hyperref}
 \unimathsetup{math-style=french, bold-style=upright, sans-style=upright}
 
 \iflegacy
-
 \iftimes
 \ifhelvet
 \renewcommand\familydefault\sfdefault
@@ -159,6 +158,79 @@ SizeFeatures = {
 BoldSlantedFont = {*slant10-bold.otf},
 ]
 
+\setsansfont{Inter}[
+Extension = .otf,
+Ligatures = {TeX},
+UprightFont = {*-Regular},
+Scale = 0.85,
+UprightFeatures = {
+SizeFeatures = {
+{Size = -16},
+{Size = 16-, Font={*Display-Regular}}
+}
+},
+BoldFont = {*-Bold},
+BoldFeatures = {
+SizeFeatures = {
+{Size = -16},
+  {Size = 16-, Font={*Display-Bold}}
+}
+},
+ItalicFont = {*-Italic},
+ItalicFeatures = {
+SizeFeatures= {
+{Size = -16},
+{Size = 16-, Font={*Display-Italic}}
+}
+},
+BoldItalicFont = {*-BoldItalic},
+BoldItalicFeatures = {
+SizeFeatures = {
+{Size = -16},
+{Size = 16-, Font={*Display-BoldItalic}}
+}
+}
+]
+
+\newfontfamily\sflight{Inter}[
+Extension = .otf,
+Ligatures = {TeX},
+UprightFont = {*-Light},
+Scale = 0.85,
+UprightFeatures = {
+SizeFeatures = {
+{Size = -16},
+{Size = 16-, Font={*Display-Light}}
+}
+},
+BoldFont = {*-SemiBold},
+BoldFeatures = {
+SizeFeatures = {
+{Size = -16},
+  {Size = 16-, Font={*Display-SemiBold}}
+}
+},
+ItalicFont = {*-LightItalic},
+ItalicFeatures = {
+SizeFeatures= {
+{Size = -16},
+{Size = 16-, Font={*Display-LightItalic}}
+}
+},
+BoldItalicFont = {*-SemiBoldItalic},
+BoldItalicFeatures = {
+SizeFeatures = {
+{Size = -16},
+{Size = 16-, Font={*Display-SemiBoldItalic}}
+}
+}
+]
+
+\newcommand\textlf[1]{{\sflight#1}}
+
+\ifsans
+\renewcommand\familydefault\sfdefault
+\fi
 
 \setmathfont{latinmodern-math.otf}
 \setmathfont[range={\varnothing}]{XITSMath-Regular.otf}
@@ -651,12 +723,12 @@ headpunct={\@thmpunct}
 \ifafive
 \vspace*{1.5em} 
 \else
-\vspace*{6em}
+\vspace*{5em}
 \fi
 
 \begin{center}
 {\@coverfont\Huge\@title{\ifx\Subtitle\empty{\\[0.8em]}\else{\\[0.3em]}\fi}}
-{\ifx\@subtitle\@compare\else{\@coverfont\huge\@subtitle\\[0.8em]}\fi}
+{\ifx\@subtitle\@compare\else{\@coverfont\LARGE\@subtitle\\[1.3em]}\fi}
 
 \textsc{
 \large
@@ -665,8 +737,8 @@ headpunct={\@thmpunct}
 \vspace*{\fill}
 \ifx\shortversion\@compare{}\else
 {\smallskip \@coverfont
-\Large
-\centerline{\shortversion} \bigskip\bigskip}
+\large
+\centerline{\shortversion}}
 \fi
 
 \end{center}
