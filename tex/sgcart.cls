@@ -15,7 +15,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{sgcart}
 
-\LoadClass[reqno,11pt]{article}
+\LoadClass[reqno,12pt]{article}
 
 \newif\ifspanish\spanishfalse
 \newif\ifsans\sansfalse
@@ -381,7 +381,7 @@ top=1.95cm,bottom=1.95cm,inner=2.35cm,outer=1.55cm}
 \fi
 \SetBgPosition{-1cm, -4.5cm}
 \else
-\geometry{a4paper,left=4.3cm,right=4.3cm,top=3cm,bottom=3cm}
+\geometry{a4paper,left=4cm,right=4cm,top=3cm,bottom=3cm}
 \SetBgPosition{-0.7cm, -7cm}
 \fi
 

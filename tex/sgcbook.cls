@@ -15,7 +15,7 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{sgcbook}
 
-\LoadClass[reqno,11pt]{book}
+\LoadClass[reqno,12pt]{book}
 
 \newif\ifspanish\spanishfalse
 \newif\ifsans\sansfalse
@@ -381,7 +381,7 @@ top=1.95cm,bottom=1.95cm,inner=2.35cm,outer=1.55cm}
 \fi
 \SetBgPosition{-1cm, -4.5cm}
 \else
-\geometry{a4paper,left=4.3cm,right=4.3cm,top=3cm,bottom=3cm}
+\geometry{a4paper,left=4cm,right=4cm,top=3cm,bottom=3cm}
 \SetBgPosition{-0.7cm, -7cm}
 \fi
 
@@ -621,10 +621,17 @@ headpunct={\@thmpunct}
 \unchapter{\str@appendices}\stepcounter{chapter}\setcounter{section}{0}
 \renewcommand\thesection{\Alph{section}}}
 
-\let\@classiclabel\label
 \newcommand\@chlabel{}
-\newcommand\chlabel[1]{\renewcommand\@chlabel{#1}}
-\newcommand\chref[2]{\ref{#1}-\ref{#2}}
+\AtBeginDocument{
+\let\@classiclabel\label
+\let\@classicref\ref
+\newcommand\chlabel[1]{\renewcommand\@chlabel{#1}\@classiclabel{#1}}
+\renewcommand{\label}[1]{\@classiclabel{\@chlabel:#1}}
+\renewcommand{\ref}[2][\@compare]{
+\IfStrEq{#1}{\@compare}{\@classicref{\@chlabel:#2}}
+{\@classicref{#1}-\@classicref{#1:#2}}
+}
+}
 
 \pagestyle{fancy}
 \lhead{}
