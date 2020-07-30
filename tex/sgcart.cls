@@ -580,7 +580,6 @@ numbers=left,
 
 \newcommand\light[1]{#1!13}
 
-
 \tcbsetforeverylayer{sharp corners,
 colback = xgrey,
 colframe = xblack,
@@ -619,7 +618,7 @@ notefont=\bfseries, notebraces={}{},
 bodyfont=\normalfont,
 spaceabove=\abovethm@skip,
 spacebelow=\env@sep,
-headformat=\NUMBER \NOTE,
+headformat={\NUMBER\NOTE},
 headpunct={\@thmpunct}
 ]{custom}
 \else
@@ -632,6 +631,7 @@ headpunct={\@thmpunct}
 ]{theorem}
 \declaretheoremstyle[
 notefont=\bfseries, notebraces={[}{]},
+headfont=\bfseries,
 bodyfont=\normalfont,
 spaceabove=\abovethm@skip,
 spacebelow=\env@sep,
@@ -700,12 +700,10 @@ headpunct={\@thmpunct}
 
 
 
-\titleformat{\section}{\center\Large\bfseries}{
-\noindent\S\thesection\ }{0pt}{}
+\titleformat{\section}[block]{\noindent\center\Large\bfseries}{\S\thesection\ }{0pt}{}
 \titlespacing*{\section}{0pt}{\title@space}{\head@sep}[0pt]
 
-\titleformat{\subsection}{\bfseries\large}{
-\noindent \S\thesubsection \ }{0pt}{}
+\titleformat{\subsection}{\noindent\bfseries\large}{\S\thesubsection \ }{0pt}{}
 \titlespacing*{\subsection}{0pt}{\head@sep}{\head@sep}[0pt]
 
 
