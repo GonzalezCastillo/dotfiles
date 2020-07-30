@@ -246,7 +246,7 @@ BoldItalicFont = {*-BoldItalic},
 \newcommand{\und}[1]{\underline{#1}}
 \newcommand{\tx}[1]{\text{#1}}
 
-\newcommand{\di}[1]{\mathop{d#1}}
+\newcommand{\di}[1]{\mathop{\mathrm{d}#1}}
 \newcommand{\De}[1]{\mathop{\Delta#1}}
 \newcommand{\de}[1]{\mathop{\delta#1}}
 \newcommand{\mmid}{\;\middle\vert\;}
@@ -274,7 +274,7 @@ BoldItalicFont = {*-BoldItalic},
 \definecolor{xfix}{RGB}{249, 181, 169}
 \definecolor{xtodo}{RGB}{180, 226, 249}
 \newcommand{\soulcolour}{yellow}
-\DeclareRobustCommand{\fix}[1]{\sethlcolor{xfix}\hl{\textbf{FIX ME:} #1}\sethlcolor{\soulcolour}}
+\DeclareRobustCommand{\fixme}[1]{\sethlcolor{xfix}\hl{\textbf{FIX ME:} #1}\sethlcolor{\soulcolour}}
 \DeclareRobustCommand{\todo}[1]{\sethlcolor{xtodo}\hl{\textbf{TO-DO:} #1}\sethlcolor{\soulcolour}}
 
 
@@ -658,11 +658,15 @@ headpunct={\@thmpunct}
 {\@coverfont\Huge\@title{\ifx\Subtitle\empty{\\[0.8em]}\else{\\[0.3em]}\fi}}
 {\ifx\@subtitle\@compare\else{\@coverfont\huge\@subtitle\\[0.8em]}\fi}
 
-\scshape\LARGE\@author
+\textsc{
+\large
+\@author}
 
 \vspace*{\fill}
 \ifx\shortversion\@compare{}\else
-{\smallskip \@coverfont\LARGE\shortversion \bigskip\bigskip}
+{\smallskip \@coverfont
+\Large
+\centerline{\shortversion} \bigskip\bigskip}
 \fi
 
 \end{center}
