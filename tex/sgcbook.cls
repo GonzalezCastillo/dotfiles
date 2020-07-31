@@ -10,7 +10,7 @@
 %% All rights reserved.
 %% 
 
-%%fakesection Basic setup and options
+%%fakesection Initial setup and class options
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{sgcbook}
@@ -43,7 +43,7 @@
 
 \ProcessOptions\relax
 
-%%fakesection Packages
+%%fakesection Packages and basic settings
 \RequirePackage{geometry, graphicx, tikz, pgfplots, circuitikz}
 \RequirePackage{enumitem, import, centernot, cancel, array, tabu, soul}
 \RequirePackage{amsmath, amssymb, amsthm, thmtools, braket, qcircuit, mathtools}
@@ -59,6 +59,7 @@
 
 \sethlcolor{yellow}
 \tabulinesep=0.4em
+\setlength{\arrayrulewidth}{0.75pt}
 
 \RequirePackage{titlesec, tocstyle}
 \usetocstyle{standard}
