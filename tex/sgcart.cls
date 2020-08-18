@@ -234,7 +234,7 @@ SizeFeatures = {
 \fi
 
 \setmathfont{latinmodern-math.otf}
-\setmathfont[range={\varnothing}]{XITSMath-Regular.otf}
+\setmathfont[range={\varnothing,\setminus}]{XITSMath-Regular.otf}
 \fi
 
 \setmonofont{Hack}[

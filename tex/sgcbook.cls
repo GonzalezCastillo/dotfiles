@@ -234,7 +234,7 @@ SizeFeatures = {
 \fi
 
 \setmathfont{latinmodern-math.otf}
-\setmathfont[range={\varnothing}]{XITSMath-Regular.otf}
+\setmathfont[range={\varnothing,\setminus}]{XITSMath-Regular.otf}
 \fi
 
 \setmonofont{Hack}[
@@ -691,7 +691,7 @@ headpunct={\@thmpunct}
 
 \newcommand\unchapter[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\markboth{#1}{}}
 \renewcommand\appendix{
-\unchapter{\str@appendices}\stepcounter{chapter}\setcounter{section}{0}
+\unchapter{\str@appendices}\stepcounter{chapter}\chlabel{appendix}\setcounter{section}{0}
 \renewcommand\thesection{\Alph{section}}}
 
 \newcommand\@chlabel{}
@@ -699,11 +699,10 @@ headpunct={\@thmpunct}
 \let\@classiclabel\label
 \let\@classicref\ref
 \newcommand\chlabel[1]{\renewcommand\@chlabel{#1}\@classiclabel{#1}}
+\let\@classicamslabel\label@in@display
 \renewcommand{\label}[1]{\@classiclabel{\@chlabel:#1}}
-\renewcommand{\ref}[2][\@compare]{
-\IfStrEq{#1}{\@compare}{\@classicref{\@chlabel:#2}}
-{\@classicref{#1}-\@classicref{#1:#2}}
-}
+\renewcommand{\label@in@display}[1]{\@classicamslabel{\@chlabel:#1}}
+\renewcommand{\ref}[2][\@compare]{\IfStrEq{#1}{\@compare}{\@classicref{\@chlabel:#2}}{\IfStrEq{#1}{appendix}{\@classicref{appendix:#2}}{\@classicref{#1}-\@classicref{#1:#2}}}}
 }
 
 \pagestyle{fancy}
