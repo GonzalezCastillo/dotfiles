@@ -89,8 +89,8 @@ ZSH_HIGHLIGHT_STYLES[command]=fg=$PT[green],bold
 ZSH_HIGHLIGHT_STYLES[precommand]=fg=$PT[green],underline
 ZSH_HIGHLIGHT_STYLES[assign]=fg=$PT[green]
 
-ZSH_HIGHLIGHT_STYLES[path]=fg=$PT[orange]
-ZSH_HIGHLIGHT_STYLES[path_prefix]=fg=$PT[orange],underline
+ZSH_HIGHLIGHT_STYLES[path]=fg=$PT[orange],underline
+ZSH_HIGHLIGHT_STYLES[path_prefix]=fg=$PT[orange]
 ZSH_HIGHLIGHT_STYLES[globbing]=$PT[yellow]
 
 ZSH_HIGHLIGHT_STYLES[single-hyphen-option]=fg=$PT[blue],bold
