@@ -87,6 +87,7 @@ urlcolor=blue,filecolor=black,citecolor=black]{hyperref}
 \fi
 
 \setmainfont{XITS}[
+Scale = 1.03,
 Extension = .otf,
 UprightFont = {*-Regular},
 BoldFont = {*-Bold},
@@ -100,7 +101,7 @@ BoldFont = {*-bold},
 ItalicFont = {*-italic},
 BoldItalicFont = {*-bolditalic}]
 
-\setmathfont{XITSMath-Regular.otf}
+\setmathfont[Scale = 1.03]{XITSMath-Regular.otf}
 \fi
 
 \else
@@ -454,7 +455,7 @@ top=1.95cm,bottom=1.95cm,inner=2.35cm,outer=1.55cm}
 \fi
 \SetBgPosition{-1cm, -4.5cm}
 \else
-\geometry{a4paper,left=4cm,right=4cm,top=3cm,bottom=3cm}
+\geometry{a4paper,left=3.6cm,right=3.6cm,top=3cm,bottom=3cm}
 \SetBgPosition{-0.7cm, -7cm}
 \fi
 
@@ -758,7 +759,7 @@ headpunct={\@thmpunct}
 \endgroup
 
 \ifx\@to\@compare{}\else
-\vspace*{\fill}\noindent\@to\vspace*{10em}\vspace*{\fill}
+\vspace*{\fill}\noindent{\itshape\@to}\vspace*{10em}\vspace*{\fill}
 \newpage\fi
 
 \tableofcontents
