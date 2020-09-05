@@ -1,4 +1,3 @@
-unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
 setopt interactivecomments # Allow comments in interactive shell.
 
 # Improve history navigation.
@@ -15,4 +14,8 @@ MY_LOCAL_MACHINE=false;
 
 if [[ $(hostname) =~ SGC-[0-9]+\.local ]]; then
 	MY_LOCAL_MACHINE=true;
+fi
+
+if [[ MY_LOCAL_MACHINE ]]; then
+	unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
 fi
