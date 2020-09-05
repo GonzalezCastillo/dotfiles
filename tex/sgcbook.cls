@@ -732,11 +732,7 @@ headpunct={\@thmpunct}
 
 \titlespacing{\part}{0pt}{0pt}{0pt}[0pt]
 
-\titleformat{\chapter}[display]{
-\setlength{\parskip}{0pt}\setlength{\parindent}{0pt}
-\center\huge
-}{\large\bfseries\chaptername~\thechapter
-}{0.1em}{}[{\bigskip\bigskip}]
+\titleformat{\chapter}[display]{\setlength{\parskip}{0pt}\setlength{\parindent}{0pt}\center\huge}{\large\bfseries\chaptername~\thechapter}{0.1em}{}[{\bigskip\bigskip}]
 
 \titlespacing*{\chapter}{0pt}{0pt}{3em}[0pt]
 
