@@ -17,10 +17,10 @@ fi
 ln -s $DOTFILES/zsh ~/.zsh
 
 ln -s -f $DOTFILES/latexmkrc ~/.latexmkrc
-if [[ -d ~/Library/texmf/tex/latex/local ]]; then
-	rm ~/Library/texmf/tex/latex/local
+if [[ -d ~/Library/texmf/ ]]; then
+	rm ~/Library/texmf
 fi
-ln -s $DOTFILES/tex ~/Library/texmf/tex/latex/local
+ln -s $DOTFILES/tex/texmf ~/Library/texmf
 
 if [[ ! -d ~/.rbin ]]; then
 	mkdir ~/.rbin
