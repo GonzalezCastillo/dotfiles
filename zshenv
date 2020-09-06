@@ -1,4 +1,4 @@
-DocRoot=~/GDrive
+DocRoot=~/cloud
 RepoRoot=~/repos
 UORoot=~/"Onedrive - Universidad de Oviedo"
 
