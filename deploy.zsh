@@ -16,11 +16,17 @@ if [[ -d ~/.zsh ]]; then
 fi
 ln -s $DOTFILES/zsh ~/.zsh
 
-ln -s -f $DOTFILES/latexmkrc ~/.latexmkrc
-if [[ -d ~/Library/texmf/ ]]; then
-	rm ~/Library/texmf
+if [[ $(hostname) =~ SGC-[0-9]+\.local ]]; then
+	TEXMFDIR=~/Library/texmf
+else
+	TEXMFDIR=~/texmf
 fi
-ln -s $DOTFILES/tex/texmf ~/Library/texmf
+
+ln -s -f $DOTFILES/latexmkrc ~/.latexmkrc
+if [[ -d $TEXMFDIR ]]; then
+	rm $TEXMFDIR
+fi
+ln -s $DOTFILES/tex/texmf $TEXMFDIR
 
 if [[ ! -d ~/.rbin ]]; then
 	mkdir ~/.rbin
