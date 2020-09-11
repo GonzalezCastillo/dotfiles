@@ -5,6 +5,7 @@ bindkey "^[[A" history-beginning-search-backward
 bindkey "^[[B" history-beginning-search-forward
 
 export EDITOR=vim
+export GPG_TTY=$(tty)
 
 alias grep='grep --color'
 alias cp='cp -i'
