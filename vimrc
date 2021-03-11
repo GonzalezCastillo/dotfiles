@@ -22,7 +22,7 @@ syntax spell toplevel
 set shell=/bin/zsh
 
 set backspace=2
-set guifont=SF\ Mono:h15
+set guifont=SF\ Mono:h14
 
 map <C-n> :NERDTreeToggle<CR>
 
