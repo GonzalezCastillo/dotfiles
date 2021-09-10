@@ -1330,7 +1330,7 @@ syntax match mmaSymbol "//\s*[A-Za-z0-9`$]\+"ms=s+2 contains=mmaOperator,mmaSyst
 
 "Comments and TODOs
 syntax keyword mmaTodo TODO FIX FIXME BUG contained
-syntax region mmaComment start=/(\*/ end=/\*)/ skipempty contains=mmaComment, mmaTodo
+syntax region mmacomment start=/(\*/ end=/\*)/ skipempty contains=mmacomment, mmatodo
 
 "Slots & Slotsequences
 syntax match mmaSlot "^\@<!#\%(#\d*\|\d\+\)\="

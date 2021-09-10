@@ -11,7 +11,7 @@
 
 " THIS FILE IS DISTRIBUTED UNDER THE SAME TERMS AS GNU OCTAVE ITSELF, THE GNU
 " GENERAL PUBLIC LICENSE (GPL). See OCTAVE-LICENSE.md for a copy of this
-" license..
+" license.
 
 
 if version < 600
