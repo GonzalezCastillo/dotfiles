@@ -3,7 +3,6 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
-
 colorscheme solarized8
 set background=dark
 command Light set background=light
@@ -36,6 +35,7 @@ imap \'i í
 imap \'o ó
 imap \'u ú
 imap \~n ñ
+imap \"u ü
 
 imap \'A Á
 imap \'E É
@@ -56,7 +56,7 @@ let g:python_recommended_style=0
 augroup custom_filetypedetect 
 	autocmd!
 	autocmd BufRead,BufNewFile *.m,*.oct set filetype=octave 
-	autocmd BufNewFile,BufRead *.cls,*.ins set filetype=tex
+	autocmd BufNewFile,BufRead *.cls,*.ins,*.bib set filetype=tex
 	autocmd BufNewFile,BufRead *.wl,*.wls,*.nb set filetype=mma
 augroup END 
 
