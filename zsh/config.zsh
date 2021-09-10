@@ -1,4 +1,5 @@
 setopt interactivecomments # Allow comments in interactive shell.
+setopt ignoreeof # Don't logout with Control-D.
 
 # Improve history navigation.
 bindkey "^[[A" history-beginning-search-backward
@@ -13,10 +14,12 @@ alias mv='mv -i'
 
 MY_LOCAL_MACHINE=false;
 
-if [[ $(hostname) =~ SGC-[0-9]+\.local ]]; then
+if [[ $(hostname) =~ SDEV-.+\.local ]]; then
 	MY_LOCAL_MACHINE=true;
 fi
 
 if [[ MY_LOCAL_MACHINE ]]; then
 	unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
+	DocRoot=~/icloud
+	RepoRoot=~/repos
 fi

@@ -31,7 +31,7 @@ done
 function draw_palette()
 {
 	for color in {yellow,orange,red,magenta,violet,blue,cyan,green}; do
-		print -P $FG[$color]$color%f $BG[$color]$color;
+		print -P $FG[$color]$color%f $BG[$color]$color $FT[reset];
 	done
 }
 
@@ -39,7 +39,7 @@ function draw_palette()
 if $MY_LOCAL_MACHINE; then
 	PROMPT_SYMBOL="$FT[bold]$FG[violet]>$FT[reset]%f"
 else
-	PROMPT_SYMBOL="$FT[bold]$FG[blue]>>$FT[reset]%f"
+	PROMPT_SYMBOL="$FT[bold]$FG[blue]>$FT[reset]%f"
 fi
 
 function GET_PROMPT() {

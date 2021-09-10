@@ -1,4 +1,4 @@
-function approxdir()
+function cdd()
 {
 	cd $1; shift
 	for dir in "$@"; do
@@ -6,30 +6,30 @@ function approxdir()
 	done
 }
 
-function crs()
-{
-	approxdir $DocRoot/Courses $@
-}
 
-function uo()
-{
-	approxdir $UORoot $@
-}
+if [[ MY_LOCAL_MACHINE ]]; then
 
-function repo()
-{
-	approxdir $RepoRoot $@
-}
+	function crs()
+	{
+		cdd $DocRoot/Archive/Courses $@
+	}
 
-function rs()
-{	
-	approxdir $DocRoot/Research $@
-}
+	function repo()
+	{
+		cdd $RepoRoot $@
+	}
 
-function proj()
-{
-	approxdir $DocRoot/Projects $@
-}
+	function proj()
+	{
+		cdd $DocRoot/Cloud/Projects $@
+	}
+
+	function doc()
+	{
+		cdd $DocRoot/Cloud/Documents $@
+	}
+
+fi
 
 # Implementation of terminal trash can.
 
