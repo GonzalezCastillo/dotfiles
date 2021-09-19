@@ -1,8 +1,11 @@
 function cdd()
 {
-	cd $1; shift
 	for dir in "$@"; do
-		cd *$dir*
+		if [[ $dir =~ .*/.* ]]; then
+			cd $dir
+		else
+			cd *$dir*
+		fi
 	done
 }
 
