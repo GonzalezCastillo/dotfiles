@@ -1,6 +1,6 @@
 # The MIT License
 
-*Copyright (C) 2020 Samuel González Castillo.*
+*Copyright (C) 2020–2021 Samuel González Castillo.*
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
