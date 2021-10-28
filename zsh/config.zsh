@@ -1,5 +1,7 @@
 setopt interactivecomments # Allow comments in interactive shell.
-setopt ignoreeof # Don't logout with Control-D.
+if [[ MY_LOCAL_MACHINE ]]; then
+	setopt ignoreeof # Don't logout with Control-D.
+fi
 
 # Improve history navigation.
 bindkey "^[[A" history-beginning-search-backward
