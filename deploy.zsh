@@ -16,7 +16,7 @@ if [[ -d ~/.zsh ]]; then
 fi
 ln -s $DOTFILES/zsh ~/.zsh
 
-if [[ $(hostname) =~ SGC-[0-9]+\.local ]]; then
+if [[ $(hostname) =~ SDEV-[0-9A-Z]+\.local ]]; then
 	TEXMFDIR=~/Library/texmf
 else
 	TEXMFDIR=~/texmf
