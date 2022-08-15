@@ -44,14 +44,12 @@ imap \'O Ó
 imap \'U Ú
 imap \~N Ñ
 
-imap <F3> <C-R>=strftime("\\marginpar{%a %d/%m}")<CR>
-imap <F2> <C-R>=strftime("`%Y\\%m\\%d %H:%M:%S %Z`")<CR>
-
 " VIM LATEX
 filetype plugin on
 
 let g:tex_flavor='latex'
 let g:python_recommended_style=0
+let g:Tex_SmartKeyQuote=0
 
 augroup custom_filetypedetect 
 	autocmd!
@@ -60,14 +58,9 @@ augroup custom_filetypedetect
 	autocmd BufNewFile,BufRead *.wl,*.wls,*.nb set filetype=mma
 augroup END 
 
-augroup texfunctions
-	autocmd!
-	autocmd Filetype tex inoremap '' "
-augroup END
-
 augroup yaml
 	autocmd!
-	autocmd BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=indent
+	autocmd BufNewFile,BufReadPost *.yaml,yml set filetype=yaml foldmethod=indent
 	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
 
