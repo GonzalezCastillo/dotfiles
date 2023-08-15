@@ -12,11 +12,6 @@ function cdd()
 
 if [[ MY_LOCAL_MACHINE ]]; then
 
-	function crs()
-	{
-		cdd $DocRoot/Archive/Courses $@
-	}
-
 	function repo()
 	{
 		cdd $RepoRoot $@
@@ -34,17 +29,3 @@ if [[ MY_LOCAL_MACHINE ]]; then
 
 fi
 
-# Implementation of terminal trash can.
-
-function trash()
-{
-	for file in "$@"; do
-		mv $file ~/.rbin/"$(date +%Y.%m.%d-%H:%M:%S)-$file";
-	done
-}
-
-function emptytrash()
-{
-	rm -r ~/.rbin;
-	mkdir ~/.rbin;
-}

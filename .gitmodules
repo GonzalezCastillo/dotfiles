@@ -14,6 +14,6 @@
 	path = vim/pack/dev/start/vim-closetag
 	url = https://github.com/alvan/vim-closetag
 [submodule "sgc-latex"]
-	path = tex
+	path = sgctex
 	url = git@github.com:gonzalezcastillo/sgc-latex
 	branch = master

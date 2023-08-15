@@ -26,9 +26,5 @@ ln -s -f $DOTFILES/latexmkrc ~/.latexmkrc
 if [[ -d $TEXMFDIR ]]; then
 	rm $TEXMFDIR
 fi
-ln -s $DOTFILES/tex/texmf $TEXMFDIR
-
-if [[ ! -d ~/.rbin ]]; then
-	mkdir ~/.rbin
-fi
+ln -s $DOTFILES/sgctex/texmf $TEXMFDIR
 
