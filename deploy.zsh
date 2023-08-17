@@ -16,11 +16,7 @@ if [[ -d ~/.zsh ]]; then
 fi
 ln -s $DOTFILES/zsh ~/.zsh
 
-if [[ $(hostname) =~ SDEV-[0-9A-Z]+\.local ]]; then
-	TEXMFDIR=~/Library/texmf
-else
-	TEXMFDIR=~/texmf
-fi
+TEXMFDIR=~/texmf
 
 ln -s -f $DOTFILES/latexmkrc ~/.latexmkrc
 if [[ -d $TEXMFDIR ]]; then
