@@ -1,3 +1,4 @@
+abelian
 infimum
 infima
 supremum
@@ -7,10 +8,13 @@ homeomorphism
 homeomorphisms
 homeomorphisms
 homeomorphic
+homotopies
 cartesian
 diffeomorphism
+diffeomorphic
 subbundle
 covector
+covectors
 multilinear
 subalgebra
 riemannian
@@ -19,6 +23,7 @@ Hopf
 extremum
 precompact
 precompactness
+compactification
 Sobolev
 orthonormally
 orthonormality
@@ -26,3 +31,4 @@ Christoffel
 equicontinuous
 equicontinuity
 ultrafilter
+ultrafilters
