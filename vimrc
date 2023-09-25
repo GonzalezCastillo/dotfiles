@@ -44,6 +44,8 @@ imap \'O Ó
 imap \'U Ú
 imap \~N Ñ
 
+imap <F3> <C-R>='`'.strftime('%Y-%m-%d ').toupper(strftime('%a' )).'`'<CR>
+
 " VIM LATEX
 filetype plugin on
 
