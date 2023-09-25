@@ -9,23 +9,8 @@ function cdd()
 	done
 }
 
-
-if [[ MY_LOCAL_MACHINE ]]; then
-
-	function repo()
-	{
-		cdd $RepoRoot $@
-	}
-
-	function proj()
-	{
-		cdd $DocRoot/Cloud/Projects $@
-	}
-
-	function doc()
-	{
-		cdd $DocRoot/Cloud/Documents $@
-	}
-
-fi
+function repo()
+{
+	cdd $RepoRoot $@
+}
 
