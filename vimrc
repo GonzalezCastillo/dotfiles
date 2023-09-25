@@ -3,6 +3,9 @@ set tabstop=4
 set shiftwidth=4
 set autoindent
 
+set hlsearch
+set incsearch
+
 colorscheme solarized8
 set background=dark
 command Light set background=light
