@@ -1,2 +1,2 @@
-call IMAP('`e', '\epsilon', 'tex')
-call IMAP('`f', '\phi', 'tex')
+imap('`e', '\epsilon', 'tex')
+imap('`f', '\phi', 'tex')
