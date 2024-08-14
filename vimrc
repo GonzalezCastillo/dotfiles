@@ -2,6 +2,7 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set clipboard=unnamedplus
 
 set hlsearch
 set incsearch
@@ -24,7 +25,7 @@ syntax spell toplevel
 set shell=/bin/zsh
 
 set backspace=2
-set guifont=SF\ Mono:h14
+set guifont=JuliaMono\ 13
 
 map <C-n> :NERDTreeToggle<CR>
 
@@ -61,6 +62,7 @@ augroup custom_filetypedetect
 	autocmd BufRead,BufNewFile *.m,*.oct set filetype=octave 
 	autocmd BufNewFile,BufRead *.cls,*.ins,*.bib set filetype=tex
 	autocmd BufNewFile,BufRead *.wl,*.wls,*.nb set filetype=mma
+	autocmd BufRead,BufNewFile *.g,*.gi,*.gd set filetype=gap comments=s:##\ \ ,m:##\ \ ,e:##\ \ b:#
 augroup END 
 
 augroup yaml
