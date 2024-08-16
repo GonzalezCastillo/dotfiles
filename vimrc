@@ -2,36 +2,35 @@ set noexpandtab
 set tabstop=4
 set shiftwidth=4
 set autoindent
+set smartindent
 set clipboard=unnamedplus
-
+set foldmethod=syntax
 set hlsearch
 set incsearch
+set shell=/bin/zsh
+set backspace=2
 
 colorscheme solarized8
 set background=dark
 command Light set background=light
 command Dark set background=dark
-
 syntax on
 set number
 
 set encoding=utf-8
-
 set spell
 set spelllang=en_gb spell
 set spellfile=~/.vim/spell/maths.utf-8.add
 syntax spell toplevel
 
-set shell=/bin/zsh
-
-set backspace=2
 set guifont=JuliaMono\ 13
-
-map <C-n> :NERDTreeToggle<CR>
+set guioptions-=m
+set guioptions-=T
 
 command Es execute "set spell | set spelllang=es spell"
 command En execute "set spell | set spelllang=en_gb spell"
 command NT execute "NERDTree"
+map <C-n> :NERDTreeToggle<CR>
 
 imap \'a á
 imap \'e é
@@ -73,3 +72,9 @@ augroup END
 
 " Use closetag plugin in php files.
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.php'
+
+" Code completion and navigation
+inoremap <C-k> <C-x><C-o>
+set omnifunc=ccomplete#Complete
+set tags=tags
+autocmd CompleteDone * pclose
