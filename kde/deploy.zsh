@@ -5,17 +5,15 @@
 unalias cp
 
 cp -f kdeglobals.ini ~/.config/kdeglobals
+cp -f shortcuts.ini ~/.config/kglobalshortcutsrc
+cp -f lockscreen.ini ~/.config/kscreenlockerrc
+cp -f keyboard.ini ~/.config/kxkbrc
 
 cp -f konsole.ini ~/.config/konsolerc
 cp -f konsole-profile.ini ~/.local/share/konsole/Profile1.profile
-
-cp -f shortcuts.ini ~/.config/kglobalshortcutsrc
-
-cp -f thunderbird.js ~/.thunderbird/*default-default/user.js
-
 cp -f kwrite.ini ~/.config/kwriterc
 
-cp -f lockscreen.ini ~/.config/kscreenlockerrc
+cp -f thunderbird.js ~/.thunderbird/*default-default/user.js
 
 # The settings in dolphin-sidebar assume that ~ = /home/samuel.
 cp -f dolphin.ini ~/.config/dolphinrc
