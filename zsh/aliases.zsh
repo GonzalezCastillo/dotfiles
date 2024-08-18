@@ -10,6 +10,7 @@ if [[ $(uname) == "Darwin" ]]; then
 	alias octave="octave -W"
 	export PATH="/usr/local/opt/bison/bin:$PATH"
 fi
+export PATH="$HOME/.local/bin:$PATH"
 
 alias py="python3"
 

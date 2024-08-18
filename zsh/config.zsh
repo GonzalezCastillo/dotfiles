@@ -15,8 +15,10 @@ fi
 
 if [[ $MY_LOCAL_MACHINE ]]; then
 	setopt ignoreeof # Don't logout with Control-D.
-	unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
-	DocRoot=~/cloud
+	DocRoot=~/Cloud
 fi
 
+unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
+
 RepoRoot=~/repos
+
