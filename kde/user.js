@@ -11,6 +11,9 @@ user_pref("mail.identity.default.auto_quote", false);
 // Sort descending
 user_pref("mailnews.default_sort_order", 2);
 
+// ISO Date format
+user_pref("intl.date_time.pattern_override.date_short", "yyyy-MM-dd");
+
 // Font settings
 user_pref("font.name.monospace.x-western", "Inter");
 user_pref("font.name.sans-serif.x-western", "Inter");
