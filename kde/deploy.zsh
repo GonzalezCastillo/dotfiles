@@ -15,6 +15,8 @@ cp -f thunderbird.js ~/.thunderbird/*default-default/user.js
 
 cp -f kwrite.ini ~/.config/kwriterc
 
+cp -f lockscreen.ini ~/.config/kscreenlockerrc
+
 # The settings in dolphin-sidebar assume that ~ = /home/samuel.
 cp -f dolphin.ini ~/.config/dolphinrc
 cp -f dolphin-view.ini ~/.local/share/dolphin/view_properties/global/.directory
