@@ -4,33 +4,40 @@ set shiftwidth=4
 set autoindent
 set smartindent
 set clipboard=unnamedplus
-set foldmethod=syntax
 set hlsearch
 set incsearch
 set shell=/bin/zsh
 set backspace=2
+set guicursor=""
 
-colorscheme solarized8
+set termguicolors
 set background=dark
-command Light set background=light
-command Dark set background=dark
+command! Light colorscheme xcodelight
+command! Dark colorscheme xcodedark
+command! Slight execute "colorscheme solarized8 | set background=light"
+command! Sdark execute "colorscheme solarized8 | set background=dark"
+Dark
 syntax on
 set number
 
-set encoding=utf-8
-set spell
-set spelllang=en_gb spell
-set spellfile=~/.vim/spell/maths.utf-8.add
-syntax spell toplevel
-
-set guifont=JuliaMono\ 13
+set guifont=JuliaMono\ 12
 set guioptions-=m
 set guioptions-=T
 
-command Es execute "set spell | set spelllang=es spell"
-command En execute "set spell | set spelllang=en_gb spell"
-command NT execute "NERDTree"
+set encoding=utf-8
+syntax spell toplevel
+command! Es execute "set spelllang=es spell | set spellfile="
+command! En execute "set spelllang=en_gb spell | set spellfile=~/.vim/spell/maths.utf-8.add"
+En
+
+command! NT execute "NERDTree"
 map <C-n> :NERDTreeToggle<CR>
+
+nnoremap J :m '>+1<CR>gv=gv
+nnoremap K :m '<-2<CR>gv=gv
+
+let g:mapleader=" "
+nnoremap <leader>n :noh<CR>
 
 imap \'a á
 imap \'e é
@@ -51,7 +58,6 @@ imap <F3> <C-R>='`'.strftime('%Y-%m-%d ').toupper(strftime('%a' )).'`'<CR>
 
 " VIM LATEX
 filetype plugin on
-
 let g:tex_flavor='latex'
 let g:python_recommended_style=0
 let g:Tex_SmartKeyQuote=0
@@ -70,11 +76,10 @@ augroup yaml
 	autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 augroup END
 
+augroup filetype_settings
+	autocmd FileType c,python set cc=80
+	autocmd FileType python setlocal expandtab
+augroup END
+
 " Use closetag plugin in php files.
 let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.php'
-
-" Code completion and navigation
-inoremap <C-k> <C-x><C-o>
-set omnifunc=ccomplete#Complete
-set tags=tags
-autocmd CompleteDone * pclose
