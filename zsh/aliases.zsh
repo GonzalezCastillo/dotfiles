@@ -14,3 +14,7 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias py="python3"
 
+if [[ $MY_LOCAL_MACHINE == true ]]; then
+	alias vi="nvim"
+	alias fd="fdfind"
+fi
