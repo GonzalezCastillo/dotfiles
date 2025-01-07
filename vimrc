@@ -33,8 +33,8 @@ En
 command! NT execute "NERDTree"
 map <C-n> :NERDTreeToggle<CR>
 
-nnoremap J :m '>+1<CR>gv=gv
-nnoremap K :m '<-2<CR>gv=gv
+noremap J :m '>+1<CR>gv=gv
+noremap K :m '<-2<CR>gv=gv
 
 let g:mapleader=" "
 nnoremap <leader>n :noh<CR>
