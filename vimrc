@@ -77,8 +77,10 @@ augroup yaml
 augroup END
 
 augroup filetype_settings
+	autocmd!
 	autocmd FileType c,python set cc=80
 	autocmd FileType python setlocal expandtab
+	autocmd FileType tex setlocal indentexpr=
 augroup END
 
 " Use closetag plugin in php files.

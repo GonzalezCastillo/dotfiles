@@ -1,5 +1,7 @@
 setopt interactivecomments # Allow comments in interactive shell.
 
+bindkey -e
+
 # Improve history navigation.
 HISTFILE=~/.zsh_history        # File where history is saved
 HISTSIZE=10000                 # Number of commands to keep in memory
