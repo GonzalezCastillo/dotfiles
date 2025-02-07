@@ -13,7 +13,8 @@ require('lspconfig').clangd.setup{
 	on_attach = on_attach,
 	 capabilities = {
 		offsetEncoding = { "utf-16" }
-	 }
+	 },
+	 cmd = { "clangd" }
 }
 
 require('lspconfig').pylsp.setup{
