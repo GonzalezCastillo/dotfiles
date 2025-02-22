@@ -9,6 +9,7 @@ set incsearch
 set shell=/bin/zsh
 set backspace=2
 set guicursor=""
+set mouse=a
 
 set termguicolors
 set background=dark
