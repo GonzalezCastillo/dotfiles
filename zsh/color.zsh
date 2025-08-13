@@ -65,13 +65,8 @@ setopt prompt_subst # Allow substitution of functions in prompt.
 PROMPT='$(GET_PROMPT)' # Single quotes preserve the literal value.
 
 # Get coloured output for lists.
-if [[ $(uname) == Darwin ]]; then
-	export CLICOLOR=1
-	export LSCOLORS=GxBxhxDxfxhxhxhxhxcxcx
-else
-	alias ls="ls --color"
-	export LS_COLORS="di=1;36:ln=0;31:ex=0;45"
-fi
+alias ls="ls --color"
+export LS_COLORS="di=1;36:ln=0;31:ex=0;45"
 
 # Load the syntax highlighting plug-in.
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

@@ -5,14 +5,10 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
-if [[ $(uname) == "Darwin" ]]; then
-	alias gvim="/Applications/MacVim.app/Contents/MacOS/Vim -g"	
-	alias octave="octave -W"
-	export PATH="/usr/local/opt/bison/bin:$PATH"
-fi
 export PATH="$HOME/.local/bin:$PATH"
 
-alias py="python3"
+alias py="~/.py/bin/python"
+alias pip="~/.py/bin/pip"
 
 if [[ $MY_LOCAL_MACHINE == true ]]; then
 	alias vi="nvim"

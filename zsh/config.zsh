@@ -13,7 +13,5 @@ if [[ $MY_LOCAL_MACHINE == true ]]; then
 	export EDITOR=nvim
 fi
 
-unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
-
 RepoRoot=~/repos
 
