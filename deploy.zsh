@@ -48,7 +48,7 @@ if [[ $deploy_nvim -eq 1 ]]; then
 	clear_link $DOTFILES/vim/colors $NVIMDIR/colors
 	clear_link $DOTFILES/vim/spell $NVIMDIR/spell
 	nvim --headless +PlugInstall +qall # Install packages
-	nvim --headless -c "MasonInstall clangd python-lsp-server" -c "qall"
+	nvim --headless -c "MasonInstall clangd python-lsp-server rust-analyzer" -c "qall"
 	clear_link $DOTFILES/nvim-plugins $NVIMDIR/after/plugin
 	clear_link $DOTFILES/vim/ftdetect $NVIMDIR/ftdetect
 	clear_link $DOTFILES/vim/syntax $NVIMDIR/syntax
