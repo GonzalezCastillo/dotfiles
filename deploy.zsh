@@ -27,6 +27,7 @@ python3 -m venv ~/.py
 clear_link $DOTFILES/vimrc ~/.vimrc
 clear_link $DOTFILES/vim ~/.vim
 
+clear_link $DOTFILES/kitty.conf ~/.config/kitty/kitty.conf
 clear_link $DOTFILES/zshrc ~/.zshrc
 clear_link $DOTFILES/zshenv ~/.zshenv
 clear_link $DOTFILES/zsh ~/.zsh

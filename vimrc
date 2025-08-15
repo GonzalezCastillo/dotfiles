@@ -8,7 +8,6 @@ set hlsearch
 set incsearch
 set shell=/bin/zsh
 set backspace=2
-set guicursor=""
 set mouse=a
 set encoding=utf-8
 
