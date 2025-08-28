@@ -65,6 +65,8 @@ augroup custom_filetypedetect
 	autocmd BufNewFile,BufRead *.wl,*.wls,*.nb set filetype=mma
 	autocmd BufNewFile,BufRead *.g,*.gi,*.gd set filetype=gap comments=s:##\ \ ,m:##\ \ ,e:##\ \ b:#
 	autocmd BufNewFile,BufReadPost *.yaml,yml set filetype=yaml foldmethod=indent
+	autocmd BufNewFile,BufReadPost *.rhai set filetype=rhai
+	autocmd BufNewFile,BufReadPost *.typ set filetype=typst
 augroup END 
 
 augroup filetype_settings
