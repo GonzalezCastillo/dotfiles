@@ -1,7 +1,7 @@
 export EDITOR=vim
 export GPG_TTY=$(tty) # Git signing.
 
-MY_LOCAL_MACHINE=;
+MY_LOCAL_MACHINE=false;
 
 if [[ -z $SSH_TTY ]]; then
 	MY_LOCAL_MACHINE=true;
@@ -12,6 +12,8 @@ if [[ $MY_LOCAL_MACHINE == true ]]; then
 	DocRoot=~/Cloud
 	export EDITOR=nvim
 fi
+
+unsetopt CASE_GLOB # We don't want zsh to be case sensitive.
 
 RepoRoot=~/repos
 

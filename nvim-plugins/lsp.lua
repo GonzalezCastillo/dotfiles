@@ -7,6 +7,8 @@ local on_attach = function(client, bufnr)
 	vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
 	vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
 end
+vim.keymap.set('n', '<C-e>', vim.diagnostic.open_float, { desc = "Show diagnostics for line" })
+
 
 require('lspconfig').clangd.setup{
 	on_attach = on_attach,

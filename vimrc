@@ -75,7 +75,7 @@ augroup filetype_settings
 	autocmd FileType c,python setlocal cc=80
 	autocmd FileType python setlocal expandtab
 	autocmd FileType tex setlocal indentexpr=
-	autocmd FileType rust setlocal makeprg=cargo\ build, cc=100
+	autocmd FileType rust setlocal makeprg=cargo\ build cc=100
 augroup END
 
 " Use closetag plugin in php files.

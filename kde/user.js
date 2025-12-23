@@ -17,7 +17,7 @@ user_pref("intl.date_time.pattern_override.date_short", "yyyy-MM-dd");
 // Calendar settings
 user_pref("calendar.week.start", 1);
 user_pref("calendar.view.daystarthour", 9);
-user_pref("calendar.view.dayendhour", 19);
+user_pref("calendar.view.dayendhour", 17);
 user_pref("calendar.view.visiblehours", 12);
 
 // Font settings
@@ -25,10 +25,6 @@ user_pref("font.name.monospace.x-western", "Inter");
 user_pref("font.name.sans-serif.x-western", "Inter");
 user_pref("font.size.monospace.x-western", 17);
 user_pref("font.size.variable.x-western", 17);
-
-// Disable local address books
-user_pref("ldap_2.servers.history.dirType", -1);
-user_pref("ldap_2.servers.pab.dirType", -1);
 
 // Don't archive in year folders
 user_pref("mail.identity.default.archive_granularity", 0);
