@@ -10,6 +10,9 @@ set shell=/bin/zsh
 set backspace=2
 set mouse=a
 set encoding=utf-8
+set breakindent
+set wrap
+set linebreak
 
 set termguicolors
 set background=dark
