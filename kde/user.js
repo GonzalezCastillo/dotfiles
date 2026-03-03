@@ -16,8 +16,8 @@ user_pref("intl.date_time.pattern_override.date_short", "yyyy-MM-dd");
 
 // Calendar settings
 user_pref("calendar.week.start", 1);
-user_pref("calendar.view.daystarthour", 9);
-user_pref("calendar.view.dayendhour", 17);
+user_pref("calendar.view.daystarthour", 8);
+user_pref("calendar.view.dayendhour", 18);
 user_pref("calendar.view.visiblehours", 12);
 
 // Font settings

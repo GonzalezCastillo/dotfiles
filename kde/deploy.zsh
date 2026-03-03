@@ -11,13 +11,7 @@ cp -f keyboard.ini ~/.config/kxkbrc
 cp -f krunner.ini ~/.config/krunnerrc
 cp -f baloofile.ini ~/.config/baloofilerc
 cp -f klaunch.ini ~/.config/klaunchrc
-cp -f klassyrc ~/.config/klassy/klassyrc
-
-cp -f konsole.ini ~/.config/konsolerc
-mkdir -p ~/.local/share/konsole
-cp -f konsole-profile.ini ~/.local/share/konsole/Profile1.profile
 cp -f kwrite.ini ~/.config/kwriterc
-
 cp -f user.js ~/.thunderbird/*default-default/
 
 # The settings in dolphin-sidebar assume that ~ = /home/samuel.
