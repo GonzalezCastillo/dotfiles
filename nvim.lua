@@ -15,8 +15,14 @@ Plug('nvim-telescope/telescope.nvim', { ['tag'] = '0.1.8' })
 Plug('vim-latex/vim-latex')
 Plug('preservim/nerdtree')
 Plug('alvan/vim-closetag')
-Plug('jiangmiao/auto-pairs')
+Plug('folke/zen-mode.nvim')
 vim.call('plug#end')
+
+vim.api.nvim_create_user_command("Zen", function()
+  vim.cmd("ZenMode")
+  vim.wo.number = false
+  vim.wo.relativenumber = false
+end, {})
 
 -- Load settings from vimrc
 vim.cmd('so ~/.vimrc')
