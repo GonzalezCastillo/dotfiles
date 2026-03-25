@@ -19,9 +19,21 @@ Plug('folke/zen-mode.nvim')
 vim.call('plug#end')
 
 vim.api.nvim_create_user_command("Zen", function()
-  vim.cmd("ZenMode")
-  vim.wo.number = false
-  vim.wo.relativenumber = false
+	require("zen-mode").toggle({
+		window = {
+			backdrop = 1,
+			width = 90,
+		},
+		plugins = {
+		    kitty = {
+				enabled = true,
+				font = "+1",
+			}
+		},
+	})
+	vim.wo.number = false
+	vim.wo.relativenumber = false
+	vim.cmd.colorscheme("solarized8")
 end, {})
 
 -- Load settings from vimrc
