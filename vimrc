@@ -12,6 +12,8 @@ set mouse=a
 set encoding=utf-8
 set breakindent
 set wrap
+set smoothscroll
+set mousescroll=ver:1,hor:2
 set linebreak
 
 set termguicolors
