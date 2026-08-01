@@ -22,7 +22,7 @@ clear_link() {
 	ln -s -f $1 $2
 }
 
-python -m venv ~/.py
+python3 -m venv ~/.py
 
 clear_link $DOTFILES/vimrc ~/.vimrc
 clear_link $DOTFILES/vim ~/.vim
