@@ -6,4 +6,6 @@ if [[ -f ~/.custom_config.zsh ]]; then
 	source ~/.custom_config.zsh
 fi
 
-. "$HOME/.cargo/env"
+if [[ -f $HOME/.cargo/env ]]; then
+    . "$HOME/.cargo/env"
+fi
