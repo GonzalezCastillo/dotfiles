@@ -22,4 +22,6 @@ bindkey -M emacs '^[[1;2D' backward-word
 bindkey -M emacs '^[[1;2C' forward-word
 
 source ~/.zsh/color.zsh
-export PATH="$(brew --prefix rustup)/bin:$PATH"
+if [[ $MY_LOCAL_MACHINE == true ]]; then
+    export PATH="$(brew --prefix rustup)/bin:$PATH"
+fi

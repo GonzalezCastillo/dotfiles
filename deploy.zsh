@@ -2,6 +2,8 @@
 
 # BE CAREFUL: this script will overwrite your files and settings.
 
+chsh -s $(which zsh)
+
 deploy_nvim=0
 
 # Loop through arguments

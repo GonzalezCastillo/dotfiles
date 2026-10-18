@@ -14,6 +14,7 @@ set breakindent
 set wrap
 set smoothscroll
 set linebreak
+set t_ut=
 
 set termguicolors
 set background=dark

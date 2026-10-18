@@ -3,62 +3,62 @@ typeset -A PT FT FG BG
 # Define a palette (PT) of colours matching that of the Solarized-256 scheme.
 # Colours extracted from https://github.com/altercation/vim-colors-solarized
 PT=(
-	yellow	136
-	orange	166
-	red		160
-	magenta	125
-	violet	061
-	blue	033
-	cyan	037
-	green	064
+    yellow  136
+    orange  166
+    red     160
+    magenta 125
+    violet  061
+    blue    033
+    cyan    037
+    green   064
 )
 
 # Define a hash table with the usual formatting (FT) options.
 FT=(
-	reset		"%{[00m%}"
-	bold		"%{[01m%}"
-	underline	"%{[04m%}"
+    reset      "%{[00m%}"
+    bold       "%{[01m%}"
+    underline  "%{[04m%}"
 )
 
 # With the colours in the palette, define some hash tables with "switches" for 
 # both foreground and background.
 for color in {yelow,orange,red,magenta,violet,blue,cyan,green}; do
-	FG[$color]="%{[38;5;$PT[$color]m%}"
-	BG[$color]="%{[48;5;$PT[$color]m%}"
+    FG[$color]="%{[38;5;$PT[$color]m%}"
+    BG[$color]="%{[48;5;$PT[$color]m%}"
 done
 
 
 function draw_palette()
 {
-	for color in {yellow,orange,red,magenta,violet,blue,cyan,green}; do
-		print -P $FG[$color]$color%f $BG[$color]$color $FT[reset];
-	done
+    for color in {yellow,orange,red,magenta,violet,blue,cyan,green}; do
+        print -P $FG[$color]$color%f $BG[$color]$color $FT[reset];
+    done
 }
 
 # Use a different prompt symbol in remote servers.
 if $MY_LOCAL_MACHINE; then
-	PROMPT_SYMBOL="$FT[bold]$FG[violet]>$FT[reset]%f"
+    PROMPT_SYMBOL="$FT[bold]$FG[violet]>$FT[reset]%f"
 else
-	PROMPT_SYMBOL="$FT[bold]$FG[blue]>$FT[reset]%f"
+    PROMPT_SYMBOL="$FT[bold]$FG[blue]>$FT[reset]%f"
 fi
 
 function GET_PROMPT() {
 
-	GIT_BRANCH=""
+    GIT_BRANCH=""
 
-	if [[ true == "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]]; then
-		GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
-		GIT_BRANCH="$FT[bold]$FG[magenta]$GIT_BRANCH$FT[reset]%f ";
-	fi
+    if [[ true == "$(git rev-parse --is-inside-work-tree 2>/dev/null)" ]]; then
+        GIT_BRANCH="$(git rev-parse --abbrev-ref HEAD)"
+        GIT_BRANCH="$FT[bold]$FG[magenta]$GIT_BRANCH$FT[reset]%f ";
+    fi
 
-	if [[ $(pwd) == $HOME ]]; then
-		CURRENT_DIR="~"
-	else
-		CURRENT_DIR="%1d"
-	fi
-	CURRENT_DIR=$FG[orange]$FT[bold]$CURRENT_DIR$FT[reset]%f
+    if [[ $(pwd) == $HOME ]]; then
+        CURRENT_DIR="~"
+    else
+        CURRENT_DIR="%1d"
+    fi
+    CURRENT_DIR=$FG[orange]$FT[bold]$CURRENT_DIR$FT[reset]%f
 
-	echo "$GIT_BRANCH$CURRENT_DIR $PROMPT_SYMBOL "
+    echo "$GIT_BRANCH$CURRENT_DIR $PROMPT_SYMBOL "
 }
 
 setopt prompt_subst # Allow substitution of functions in prompt.

@@ -9,7 +9,5 @@ export PATH="$HOME/.local/bin:$PATH"
 
 alias py="~/.py/bin/python"
 alias pip="~/.py/bin/pip"
+alias vi="nvim"
 
-if [[ $MY_LOCAL_MACHINE == true ]]; then
-	alias vi="nvim"
-fi
