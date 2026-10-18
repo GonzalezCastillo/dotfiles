@@ -21,7 +21,13 @@ bindkey -M emacs '^[OB' history-beginning-search-forward-end
 bindkey -M emacs '^[[1;2D' backward-word
 bindkey -M emacs '^[[1;2C' forward-word
 
+source ~/.zsh/aliases.zsh
 source ~/.zsh/color.zsh
+
 if [[ $MY_LOCAL_MACHINE == true ]]; then
     export PATH="$(brew --prefix rustup)/bin:$PATH"
 fi
+
+# GHC and Cabal installed by GHCup.
+export PATH="$HOME/.ghcup/bin:$PATH"
+
